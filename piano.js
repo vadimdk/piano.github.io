@@ -1,43 +1,16 @@
-///
-//const container = document.querySelector('.buttons-container');
-//
-//container.onkeydown = (e) => {
-//   const target = e.target; // элемент который вызвал событие
-//   const btn = target.getAttribute('data-btn');
-//   }
-function animateKey(){
-    const container = document.querySelector('.buttons-container');
-   
+
+document.addEventListener('keydown', function(event) {
     
-        this.animate([
+    if ( event.code == 'KeyA') {
+       document.getElementById('buttonS').animate([
          {transform: 'translateY(0px)'},
          {transform: 'translateY(10px)'}
      ], { 
           duration: 300,
           iterations: 1
         }); 
-    
-    
-    let self = this;
-    
-container.addEventListener('keydown', function(e) {
-   let target = e.target; // элемент который вызвал событие
-   let action = target.getAttribute('data-btn');
-    if (action) {
-        self[action]();
-     }
-    
-   });
-//   document.querySelector('.buttons-container')
-       
-
-}
-document.addEventListener('keydown', function(event) {
-    
-    if ( event.code == 'KeyA') {
-        
      
-        animateKey();
+        
         audioA.play();
         console.log('A');
   }  else if (event.code == 'KeyS') {

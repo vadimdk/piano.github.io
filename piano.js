@@ -2,7 +2,7 @@
 document.addEventListener('keydown', function(event) {
     
     if ( event.code == 'KeyA') {
-       document.getElementById('buttonS').animate([
+       document.getElementById('buttonA').animate([
          {transform: 'translateY(0px)'},
          {transform: 'translateY(10px)'}
      ], { 
